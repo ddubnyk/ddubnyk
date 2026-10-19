@@ -1,4 +1,4 @@
-# Dale Dubnyk
+# D Dubnyk
 
 **Linux Infrastructure & Security Engineer**
 *14 Years Enterprise Experience | Gentoo | Systemd Hardening | Remote Architecture*
