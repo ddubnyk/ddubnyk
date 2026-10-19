@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Dale Dubnyk] | Linux Infrastructure Engineer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>[Dale Dubnyk]</h1>
+  <p class="tagline">Linux Infrastructure &amp; Security Engineer</p>
+  <nav>
+    <a href="#architecture">Architecture</a>
+    <a href="#hardening">Hardening</a>
+    <a href="#experience">Experience</a>
+    <a href="mailto:you@proton.me">Contact</a>
+    <a href="https://github.com/yourusername">GitHub</a>
+  </nav>
+</header>
+
+<main>
+<section id="summary">
+  <p>14 years enterprise IT infrastructure experience spanning Windows Server, GPO's, Intune, and Automation. Currently architecting distributed Linux security infrastructure across 9 global locations using Gentoo, systemd-nspawn, and custom kernel hardening. Seeking remote Platform/Security Engineering roles.</p>
+</section>
+
+<section id="architecture">
+  <h2>Distributed Infrastructure Architecture</h2>
+  <img src="assets/architecture.svg" alt="Multi-container nspawn architecture diagram" loading="lazy">
+  <ul>
+    <li><strong>3 continents, 9 cities</strong> — physical + VPS Gentoo hosts</li>
+    <li><strong>Unprivileged systemd-nspawn</strong> containers with per-service sandboxing</li>
+    <li><strong>GPU workload segregation</strong> via udev-based device delegation</li>
+    <li><strong>WireGuard mesh</strong> connecting all nodes with strict egress filtering</li>
+    <li><strong>Services:</strong> ARR suite, Immich, PostgreSQL, WebDAV, Syncthing, Audiobookshelf, RSS Server, Nextcloud, Beszel Monitoring, Wireguard reverse proxies, DNS/DHCP</li>
+  </ul>
+</section>
+
+<section id="hardening">
+  <h2>Security Validation Results</h2>
+  <table>
+    <thead>
+      <tr><th>Layer</th><th>Metric</th><th>Before</th><th>After</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Service</td><td>systemd-analyze security</td><td>8.5+ UNSAFE</td><td>1.2 SAFE</td></tr>
+      <tr><td>Kernel</td><td>kernel-hardening-checker fails</td><td>100+</td><td>&lt;10</td></tr>
+      <tr><td>Container</td><td>Privileged daemons required</td><td>Docker/Podman root</td><td>Zero (unprivileged nspawn)</td></tr>
+      <tr><td>Efficiency</td><td>Idle power draw vs LXD</td><td>Baseline</td><td>-2 to -3W measured</td></tr>
+    </tbody>
+  </table>
+  <p><a href="assets/hardening-matrix.md">Full hardening matrix →</a></p>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+  <article>
+    <h3>Independent Infrastructure Architect <span class="dates">2020–Present</span></h3>
+    <p>Designed and maintain distributed IT infrastructure across 9 global locations. Custom Gentoo overlays for reproducible source-based builds. Defense-in-depth from kernel through service layer.</p>
+  </article>
+  <article>
+    <h3>[Device Management Engineering] <span class="dates">[2020-current]</span></h3>
+    <p>Enterprise Windows Server administration, GPO design, Intune deployment, and automation at scale. [Add 2-3 specific accomplishments with numbers.]</p>
+  </article>
+</section>
+
+<section id="philosophy">
+  <h2>Approach</h2>
+  <blockquote>Defense-in-depth reduces CVE exploitability enough to enable risk-based maintenance scheduling rather than reactive emergency patching. Hardening buys time; it doesn't replace updates.</blockquote>
+  <p>I build systems where security is architectural, not bolt-on. Privacy-conscious by default — this site contains no tracking, no analytics, no third-party scripts.</p>
+</section>
+</main>
+
+<footer>
+  <p>No trackers. No cookies. No JavaScript. Contact: <a href="mailto:you@proton.me">you@proton.me</a></p>
+</footer>
+</body>
+</html>
